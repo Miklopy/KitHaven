@@ -20,6 +20,5 @@ jobs:
           shopify theme push \
             --store=kithaven-2.myshopify.com \
             --theme=${{ secrets.SHOPIFY_THEME_ID }} \
+            --password=${{ secrets.SHOPIFY_ACCESS_TOKEN }} \
             --nodelete
-        env:
-          SHOPIFY_CLI_THEME_TOKEN: ${{ secrets.SHOPIFY_ACCESS_TOKEN }}
